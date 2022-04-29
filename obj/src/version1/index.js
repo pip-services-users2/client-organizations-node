@@ -1,0 +1,24 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OrganizationsGrpcClientV1 = exports.OrganizationsCommandableGrpcClientV1 = exports.OrganizationsLambdaClientV1 = exports.OrganizationsHttpClientV1 = exports.OrganizationsDirectClientV1 = exports.OrganizationsMemoryClientV1 = exports.OrganizationsNullClientV1 = exports.OrganizationV1 = exports.IndustryV1 = exports.SystemPurposeV1 = void 0;
+var SystemPurposeV1_1 = require("./SystemPurposeV1");
+Object.defineProperty(exports, "SystemPurposeV1", { enumerable: true, get: function () { return SystemPurposeV1_1.SystemPurposeV1; } });
+var IndustryV1_1 = require("./IndustryV1");
+Object.defineProperty(exports, "IndustryV1", { enumerable: true, get: function () { return IndustryV1_1.IndustryV1; } });
+var OrganizationV1_1 = require("./OrganizationV1");
+Object.defineProperty(exports, "OrganizationV1", { enumerable: true, get: function () { return OrganizationV1_1.OrganizationV1; } });
+var OrganizationsNullClientV1_1 = require("./OrganizationsNullClientV1");
+Object.defineProperty(exports, "OrganizationsNullClientV1", { enumerable: true, get: function () { return OrganizationsNullClientV1_1.OrganizationsNullClientV1; } });
+var OrganizationsMemoryClientV1_1 = require("./OrganizationsMemoryClientV1");
+Object.defineProperty(exports, "OrganizationsMemoryClientV1", { enumerable: true, get: function () { return OrganizationsMemoryClientV1_1.OrganizationsMemoryClientV1; } });
+var OrganizationsDirectClientV1_1 = require("./OrganizationsDirectClientV1");
+Object.defineProperty(exports, "OrganizationsDirectClientV1", { enumerable: true, get: function () { return OrganizationsDirectClientV1_1.OrganizationsDirectClientV1; } });
+var OrganizationsHttpClientV1_1 = require("./OrganizationsHttpClientV1");
+Object.defineProperty(exports, "OrganizationsHttpClientV1", { enumerable: true, get: function () { return OrganizationsHttpClientV1_1.OrganizationsHttpClientV1; } });
+var OrganizationsLambdaClientV1_1 = require("./OrganizationsLambdaClientV1");
+Object.defineProperty(exports, "OrganizationsLambdaClientV1", { enumerable: true, get: function () { return OrganizationsLambdaClientV1_1.OrganizationsLambdaClientV1; } });
+var OrganizationsCommandableGrpcClientV1_1 = require("./OrganizationsCommandableGrpcClientV1");
+Object.defineProperty(exports, "OrganizationsCommandableGrpcClientV1", { enumerable: true, get: function () { return OrganizationsCommandableGrpcClientV1_1.OrganizationsCommandableGrpcClientV1; } });
+var OrganizationsGrpcClientV1_1 = require("./OrganizationsGrpcClientV1");
+Object.defineProperty(exports, "OrganizationsGrpcClientV1", { enumerable: true, get: function () { return OrganizationsGrpcClientV1_1.OrganizationsGrpcClientV1; } });
+//# sourceMappingURL=index.js.map
