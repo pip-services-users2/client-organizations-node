@@ -21,14 +21,13 @@ class OrganizationsDirectClientV1 extends pip_services3_rpc_nodex_1.DirectClient
         return __awaiter(this, void 0, void 0, function* () {
             let timing = this.instrument(correlationId, 'organizations.get_organizations');
             try {
-                return yield this._controller.getOrganizations(correlationId, filter, paging);
+                let res = yield this._controller.getOrganizations(correlationId, filter, paging);
+                timing.endTiming();
+                return res;
             }
             catch (err) {
                 timing.endFailure(err);
                 throw err;
-            }
-            finally {
-                timing.endTiming();
             }
         });
     }
@@ -36,14 +35,13 @@ class OrganizationsDirectClientV1 extends pip_services3_rpc_nodex_1.DirectClient
         return __awaiter(this, void 0, void 0, function* () {
             let timing = this.instrument(correlationId, 'organizations.get_organization_by_id');
             try {
-                return yield this._controller.getOrganizationById(correlationId, orgId);
+                let res = yield this._controller.getOrganizationById(correlationId, orgId);
+                timing.endTiming();
+                return res;
             }
             catch (err) {
                 timing.endFailure(err);
                 throw err;
-            }
-            finally {
-                timing.endTiming();
             }
         });
     }
@@ -51,14 +49,13 @@ class OrganizationsDirectClientV1 extends pip_services3_rpc_nodex_1.DirectClient
         return __awaiter(this, void 0, void 0, function* () {
             let timing = this.instrument(correlationId, 'organizations.get_organization_by_code');
             try {
-                return yield this._controller.getOrganizationByCode(correlationId, code);
+                let res = yield this._controller.getOrganizationByCode(correlationId, code);
+                timing.endTiming();
+                return res;
             }
             catch (err) {
                 timing.endFailure(err);
                 throw err;
-            }
-            finally {
-                timing.endTiming();
             }
         });
     }
@@ -66,14 +63,13 @@ class OrganizationsDirectClientV1 extends pip_services3_rpc_nodex_1.DirectClient
         return __awaiter(this, void 0, void 0, function* () {
             let timing = this.instrument(correlationId, 'organizations.generate_code');
             try {
-                return yield this._controller.generateCode(correlationId, orgId);
+                let res = yield this._controller.generateCode(correlationId, orgId);
+                timing.endTiming();
+                return res;
             }
             catch (err) {
                 timing.endFailure(err);
                 throw err;
-            }
-            finally {
-                timing.endTiming();
             }
         });
     }
@@ -81,14 +77,13 @@ class OrganizationsDirectClientV1 extends pip_services3_rpc_nodex_1.DirectClient
         return __awaiter(this, void 0, void 0, function* () {
             let timing = this.instrument(correlationId, 'organizations.create_organization');
             try {
-                return yield this._controller.createOrganization(correlationId, organization);
+                let res = yield this._controller.createOrganization(correlationId, organization);
+                timing.endTiming();
+                return res;
             }
             catch (err) {
                 timing.endFailure(err);
                 throw err;
-            }
-            finally {
-                timing.endTiming();
             }
         });
     }
@@ -96,14 +91,13 @@ class OrganizationsDirectClientV1 extends pip_services3_rpc_nodex_1.DirectClient
         return __awaiter(this, void 0, void 0, function* () {
             let timing = this.instrument(correlationId, 'organizations.update_organization');
             try {
-                return yield this._controller.updateOrganization(correlationId, organization);
+                let res = yield this._controller.updateOrganization(correlationId, organization);
+                timing.endTiming();
+                return res;
             }
             catch (err) {
                 timing.endFailure(err);
                 throw err;
-            }
-            finally {
-                timing.endTiming();
             }
         });
     }
@@ -111,14 +105,13 @@ class OrganizationsDirectClientV1 extends pip_services3_rpc_nodex_1.DirectClient
         return __awaiter(this, void 0, void 0, function* () {
             let timing = this.instrument(correlationId, 'organizations.delete_organization_by_id');
             try {
-                return yield this._controller.deleteOrganizationById(correlationId, orgId);
+                let res = yield this._controller.deleteOrganizationById(correlationId, orgId);
+                timing.endTiming();
+                return res;
             }
             catch (err) {
                 timing.endFailure(err);
                 throw err;
-            }
-            finally {
-                timing.endTiming();
             }
         });
     }

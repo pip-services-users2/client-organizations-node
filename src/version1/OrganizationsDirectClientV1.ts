@@ -19,12 +19,12 @@ export class OrganizationsDirectClientV1 extends DirectClient<any> implements IO
         let timing = this.instrument(correlationId, 'organizations.get_organizations');
 
         try {
-            return await this._controller.getOrganizations(correlationId, filter, paging);
+            let res = await this._controller.getOrganizations(correlationId, filter, paging);
+            timing.endTiming();
+            return res;
         } catch (err) {
             timing.endFailure(err);
             throw err;
-        } finally {
-            timing.endTiming();
         }
     }
 
@@ -32,12 +32,12 @@ export class OrganizationsDirectClientV1 extends DirectClient<any> implements IO
         let timing = this.instrument(correlationId, 'organizations.get_organization_by_id');
        
         try {
-            return await this._controller.getOrganizationById(correlationId, orgId);
+            let res = await this._controller.getOrganizationById(correlationId, orgId);
+            timing.endTiming();
+            return res;
         } catch (err) {
             timing.endFailure(err);
             throw err;
-        } finally {
-            timing.endTiming();
         }
     }
 
@@ -45,12 +45,12 @@ export class OrganizationsDirectClientV1 extends DirectClient<any> implements IO
         let timing = this.instrument(correlationId, 'organizations.get_organization_by_code');
         
         try {
-            return await this._controller.getOrganizationByCode(correlationId, code);
+            let res = await this._controller.getOrganizationByCode(correlationId, code);
+            timing.endTiming();
+            return res;
         } catch (err) {
             timing.endFailure(err);
             throw err;
-        } finally {
-            timing.endTiming();
         }
     }
     
@@ -58,12 +58,12 @@ export class OrganizationsDirectClientV1 extends DirectClient<any> implements IO
         let timing = this.instrument(correlationId, 'organizations.generate_code');
         
         try {
-            return await this._controller.generateCode(correlationId, orgId);
+            let res = await this._controller.generateCode(correlationId, orgId);
+            timing.endTiming();
+            return res;
         } catch (err) {
             timing.endFailure(err);
             throw err;
-        } finally {
-            timing.endTiming();
         }
     }
 
@@ -71,12 +71,12 @@ export class OrganizationsDirectClientV1 extends DirectClient<any> implements IO
         let timing = this.instrument(correlationId, 'organizations.create_organization');
         
         try {
-            return await this._controller.createOrganization(correlationId, organization);
+            let res = await this._controller.createOrganization(correlationId, organization);
+            timing.endTiming();
+            return res;
         } catch (err) {
             timing.endFailure(err);
             throw err;
-        } finally {
-            timing.endTiming();
         }
     }
 
@@ -84,12 +84,12 @@ export class OrganizationsDirectClientV1 extends DirectClient<any> implements IO
         let timing = this.instrument(correlationId, 'organizations.update_organization');
         
         try {
-            return await this._controller.updateOrganization(correlationId, organization);
+            let res = await this._controller.updateOrganization(correlationId, organization);
+            timing.endTiming();
+            return res;
         } catch (err) {
             timing.endFailure(err);
             throw err;
-        } finally {
-            timing.endTiming();
         }
     }
 
@@ -97,12 +97,12 @@ export class OrganizationsDirectClientV1 extends DirectClient<any> implements IO
         let timing = this.instrument(correlationId, 'organizations.delete_organization_by_id');
 
         try {
-            return await this._controller.deleteOrganizationById(correlationId, orgId);
+            let res = await this._controller.deleteOrganizationById(correlationId, orgId);
+            timing.endTiming();
+            return res;
         } catch (err) {
             timing.endFailure(err);
             throw err;
-        } finally {
-            timing.endTiming();
-        }
+        } 
     }
 }
