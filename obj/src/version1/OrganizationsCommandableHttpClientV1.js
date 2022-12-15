@@ -9,10 +9,10 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.OrganizationsCommandableGrpcClientV1 = void 0;
+exports.OrganizationsCommandableHttpClientV1 = void 0;
 const pip_services3_commons_nodex_1 = require("pip-services3-commons-nodex");
-const pip_services3_grpc_nodex_1 = require("pip-services3-grpc-nodex");
-class OrganizationsCommandableGrpcClientV1 extends pip_services3_grpc_nodex_1.CommandableGrpcClient {
+const pip_services3_rpc_nodex_1 = require("pip-services3-rpc-nodex");
+class OrganizationsCommandableHttpClientV1 extends pip_services3_rpc_nodex_1.CommandableHttpClient {
     constructor(config) {
         super('v1/organizations');
         if (config != null)
@@ -69,5 +69,5 @@ class OrganizationsCommandableGrpcClientV1 extends pip_services3_grpc_nodex_1.Co
         });
     }
 }
-exports.OrganizationsCommandableGrpcClientV1 = OrganizationsCommandableGrpcClientV1;
-//# sourceMappingURL=OrganizationsCommandableGrpcClientV1.js.map
+exports.OrganizationsCommandableHttpClientV1 = OrganizationsCommandableHttpClientV1;
+//# sourceMappingURL=OrganizationsCommandableHttpClientV1.js.map

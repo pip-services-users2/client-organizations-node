@@ -4,8 +4,8 @@ import { Factory } from 'pip-services3-components-nodex';
 import { OrganizationsNullClientV1 } from '../version1/OrganizationsNullClientV1';
 import { OrganizationsMemoryClientV1 } from '../version1/OrganizationsMemoryClientV1';
 import { OrganizationsDirectClientV1 } from '../version1/OrganizationsDirectClientV1';
-import { OrganizationsHttpClientV1 } from '../version1/OrganizationsHttpClientV1';
-import { OrganizationsLambdaClientV1 } from '../version1/OrganizationsLambdaClientV1';
+import { OrganizationsCommandableHttpClientV1 } from '../version1/OrganizationsCommandableHttpClientV1';
+import { OrganizationsCommandableLambdaClientV1 } from '../version1/OrganizationsCommandableLambdaClientV1';
 import { OrganizationsCommandableGrpcClientV1 } from '../version1/OrganizationsCommandableGrpcClientV1';
 import { OrganizationsGrpcClientV1 } from '../version1/OrganizationsGrpcClientV1';
 
@@ -25,8 +25,8 @@ export class OrganizationsClientFactory extends Factory {
 		this.registerAsType(OrganizationsClientFactory.NullClientV1Descriptor, OrganizationsNullClientV1);
 		this.registerAsType(OrganizationsClientFactory.MemoryClientV1Descriptor, OrganizationsMemoryClientV1);
 		this.registerAsType(OrganizationsClientFactory.DirectClientV1Descriptor, OrganizationsDirectClientV1);
-		this.registerAsType(OrganizationsClientFactory.HttpClientV1Descriptor, OrganizationsHttpClientV1);
-		this.registerAsType(OrganizationsClientFactory.LambdaClientV1Descriptor, OrganizationsLambdaClientV1);
+		this.registerAsType(OrganizationsClientFactory.HttpClientV1Descriptor, OrganizationsCommandableHttpClientV1);
+		this.registerAsType(OrganizationsClientFactory.LambdaClientV1Descriptor, OrganizationsCommandableLambdaClientV1);
 		this.registerAsType(OrganizationsClientFactory.CommandableGrpcClientV1Descriptor, OrganizationsCommandableGrpcClientV1);
 		this.registerAsType(OrganizationsClientFactory.GrpcClientV1Descriptor, OrganizationsGrpcClientV1);
 	}

@@ -2,12 +2,12 @@ import { ConfigParams } from 'pip-services3-commons-nodex';
 import { FilterParams } from 'pip-services3-commons-nodex';
 import { PagingParams } from 'pip-services3-commons-nodex';
 import { DataPage } from 'pip-services3-commons-nodex';
-import { CommandableGrpcClient } from 'pip-services3-grpc-nodex';
+import { CommandableHttpClient } from 'pip-services3-rpc-nodex';
 
 import { OrganizationV1 } from './OrganizationV1';
 import { IOrganizationsClientV1 } from './IOrganizationsClientV1';
 
-export class OrganizationsCommandableGrpcClientV1 extends CommandableGrpcClient implements IOrganizationsClientV1 {       
+export class OrganizationsCommandableHttpClientV1 extends CommandableHttpClient implements IOrganizationsClientV1 {       
     
     constructor(config?: any) {
         super('v1/organizations');
@@ -44,7 +44,7 @@ export class OrganizationsCommandableGrpcClientV1 extends CommandableGrpcClient 
             {
                 code: code
             }
-        );
+        );  
     }
     
     public async generateCode(correlationId: string, orgId: string): Promise<string> {

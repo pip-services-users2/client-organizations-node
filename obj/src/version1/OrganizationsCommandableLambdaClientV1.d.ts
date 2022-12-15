@@ -1,10 +1,10 @@
 import { FilterParams } from 'pip-services3-commons-nodex';
 import { PagingParams } from 'pip-services3-commons-nodex';
 import { DataPage } from 'pip-services3-commons-nodex';
-import { CommandableHttpClient } from 'pip-services3-rpc-nodex';
+import { CommandableLambdaClient } from 'pip-services3-aws-nodex';
 import { OrganizationV1 } from './OrganizationV1';
 import { IOrganizationsClientV1 } from './IOrganizationsClientV1';
-export declare class OrganizationsHttpClientV1 extends CommandableHttpClient implements IOrganizationsClientV1 {
+export declare class OrganizationsCommandableLambdaClientV1 extends CommandableLambdaClient implements IOrganizationsClientV1 {
     constructor(config?: any);
     getOrganizations(correlationId: string, filter: FilterParams, paging: PagingParams): Promise<DataPage<OrganizationV1>>;
     getOrganizationById(correlationId: string, orgId: string): Promise<OrganizationV1>;

@@ -5,8 +5,8 @@ import { ConsoleLogger } from 'pip-services3-components-nodex';
 
 import { OrganizationsMemoryPersistence } from 'service-organizations-node';
 import { OrganizationsController } from 'service-organizations-node';
-import { OrganizationsHttpServiceV1 } from 'service-organizations-node';
-import { OrganizationsHttpClientV1 } from '../../src/version1/OrganizationsHttpClientV1';
+import { OrganizationsCommandableHttpServiceV1 } from 'service-organizations-node';
+import { OrganizationsCommandableHttpClientV1 } from '../../src/version1/OrganizationsCommandableHttpClientV1';
 import { OrganizationsClientFixtureV1 } from './OrganizationsClientFixtureV1';
 
 var httpConfig = ConfigParams.fromTuples(
@@ -15,9 +15,9 @@ var httpConfig = ConfigParams.fromTuples(
     "connection.port", 3000
 );
 
-suite('OrganizationsRestClientV1', ()=> {
-    let service: OrganizationsHttpServiceV1;
-    let client: OrganizationsHttpClientV1;
+suite('OrganizationsCommandableRestClientV1', ()=> {
+    let service: OrganizationsCommandableHttpServiceV1;
+    let client: OrganizationsCommandableHttpClientV1;
     let fixture: OrganizationsClientFixtureV1;
 
     suiteSetup(async () => {
@@ -25,19 +25,19 @@ suite('OrganizationsRestClientV1', ()=> {
         let persistence = new OrganizationsMemoryPersistence();
         let controller = new OrganizationsController();
 
-        service = new OrganizationsHttpServiceV1();
+        service = new OrganizationsCommandableHttpServiceV1();
         service.configure(httpConfig);
 
         let references: References = References.fromTuples(
             new Descriptor('pip-services', 'logger', 'console', 'default', '1.0'), logger,
             new Descriptor('service-organizations', 'persistence', 'memory', 'default', '1.0'), persistence,
             new Descriptor('service-organizations', 'controller', 'default', 'default', '1.0'), controller,
-            new Descriptor('service-organizations', 'service', 'http', 'default', '1.0'), service
+            new Descriptor('service-organizations', 'service', 'commandable-http', 'default', '1.0'), service
         );
         controller.setReferences(references);
         service.setReferences(references);
 
-        client = new OrganizationsHttpClientV1();
+        client = new OrganizationsCommandableHttpClientV1();
         client.setReferences(references);
         client.configure(httpConfig);
 

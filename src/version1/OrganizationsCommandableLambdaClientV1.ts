@@ -2,15 +2,15 @@ import { ConfigParams } from 'pip-services3-commons-nodex';
 import { FilterParams } from 'pip-services3-commons-nodex';
 import { PagingParams } from 'pip-services3-commons-nodex';
 import { DataPage } from 'pip-services3-commons-nodex';
-import { CommandableGrpcClient } from 'pip-services3-grpc-nodex';
+import { CommandableLambdaClient } from 'pip-services3-aws-nodex';
 
 import { OrganizationV1 } from './OrganizationV1';
 import { IOrganizationsClientV1 } from './IOrganizationsClientV1';
 
-export class OrganizationsCommandableGrpcClientV1 extends CommandableGrpcClient implements IOrganizationsClientV1 {       
-    
+export class OrganizationsCommandableLambdaClientV1 extends CommandableLambdaClient implements IOrganizationsClientV1 {       
+
     constructor(config?: any) {
-        super('v1/organizations');
+        super('organizations');
 
         if (config != null)
             this.configure(ConfigParams.fromValue(config));
@@ -34,7 +34,7 @@ export class OrganizationsCommandableGrpcClientV1 extends CommandableGrpcClient 
             {
                 org_id: orgId
             }
-        );
+        );  
     }
 
     public async getOrganizationByCode(correlationId: string, code: string): Promise<OrganizationV1> {
