@@ -14,8 +14,8 @@ export class OrganizationsClientFactory extends Factory {
 	public static NullClientV1Descriptor = new Descriptor('service-organizations', 'client', 'null', 'default', '1.0');
 	public static MemoryClientV1Descriptor = new Descriptor('service-organizations', 'client', 'memory', 'default', '1.0');
 	public static DirectClientV1Descriptor = new Descriptor('service-organizations', 'client', 'direct', 'default', '1.0');
-	public static HttpClientV1Descriptor = new Descriptor('service-organizations', 'client', 'http', 'default', '1.0');
-	public static LambdaClientV1Descriptor = new Descriptor('service-organizations', 'client', 'lambda', 'default', '1.0');
+	public static HttpClientV1Descriptor = new Descriptor('service-organizations', 'client', 'commandable-http', 'default', '1.0');
+	public static LambdaClientV1Descriptor = new Descriptor('service-organizations', 'client', 'commandable-lambda', 'default', '1.0');
 	public static CommandableGrpcClientV1Descriptor = new Descriptor('service-organizations', 'client', 'commandable-grpc', 'default', '1.0');
 	public static GrpcClientV1Descriptor = new Descriptor('service-organizations', 'client', 'grpc', 'default', '1.0');
 	
