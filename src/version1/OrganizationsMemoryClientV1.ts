@@ -84,6 +84,7 @@ export class OrganizationsMemoryClientV1 implements IOrganizationsClientV1 {
     public async createOrganization(correlationId: string, organization: OrganizationV1): Promise<OrganizationV1> {
 
         organization.id = organization.id || IdGenerator.nextLong();
+        organization.code = organization.code || "org_id:"+IdGenerator.nextShort();
         organization.create_time = new Date();
         organization.active = organization.active != null || true;
 

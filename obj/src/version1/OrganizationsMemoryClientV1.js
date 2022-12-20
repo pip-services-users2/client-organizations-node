@@ -89,6 +89,7 @@ class OrganizationsMemoryClientV1 {
     createOrganization(correlationId, organization) {
         return __awaiter(this, void 0, void 0, function* () {
             organization.id = organization.id || pip_services3_commons_nodex_3.IdGenerator.nextLong();
+            organization.code = organization.code || "org_id:" + pip_services3_commons_nodex_3.IdGenerator.nextShort();
             organization.create_time = new Date();
             organization.active = organization.active != null || true;
             this._organizations.push(organization);
