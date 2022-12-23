@@ -6,7 +6,7 @@ import { IdGenerator } from 'pip-services3-commons-nodex';
 import { IOrganizationsClientV1 } from './IOrganizationsClientV1';
 import { OrganizationV1 } from './OrganizationV1';
 
-export class OrganizationsMemoryClientV1 implements IOrganizationsClientV1 {
+export class OrganizationsMockClientV1 implements IOrganizationsClientV1 {
     private _organizations: OrganizationV1[] = [];
             
     private matchString(value: string, search: string): boolean {

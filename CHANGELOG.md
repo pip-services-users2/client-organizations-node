@@ -1,5 +1,10 @@
 # Organizations Microservice Client for Node.js / ES2017 ChangeLog
 
+## <a name="1.0.0"></a> 1.0.0 (2022-12-23)
+
+### Breaking Changes
+* Changed components naming and descriptors
+
 ## <a name="1.0.0"></a> 1.0.0 (2022-04-25)
 
 ### Features

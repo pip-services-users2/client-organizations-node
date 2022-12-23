@@ -1,12 +1,12 @@
-import { OrganizationsMemoryClientV1 } from '../../src/version1/OrganizationsMemoryClientV1';
+import { OrganizationsMockClientV1 } from '../../src/version1/OrganizationsMockClientV1';
 import { OrganizationsClientFixtureV1 } from './OrganizationsClientFixtureV1';
 
-suite('OrganizationsMemoryClientV1', ()=> {
-    let client: OrganizationsMemoryClientV1;
+suite('OrganizationsMockClientV1', ()=> {
+    let client: OrganizationsMockClientV1;
     let fixture: OrganizationsClientFixtureV1;
 
     setup(() => {
-        client = new OrganizationsMemoryClientV1();
+        client = new OrganizationsMockClientV1();
 
         fixture = new OrganizationsClientFixtureV1(client);
     });
