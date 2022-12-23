@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.OrganizationsGrpcClientV1 = exports.OrganizationsCommandableGrpcClientV1 = exports.OrganizationsCommandableLambdaClientV1 = exports.OrganizationsCommandableHttpClientV1 = exports.OrganizationsDirectClientV1 = exports.OrganizationsMemoryClientV1 = exports.OrganizationsNullClientV1 = exports.OrganizationV1 = exports.IndustryV1 = exports.SystemPurposeV1 = void 0;
+exports.OrganizationsGrpcClientV1 = exports.OrganizationsCommandableGrpcClientV1 = exports.OrganizationsCommandableLambdaClientV1 = exports.OrganizationsCommandableHttpClientV1 = exports.OrganizationsDirectClientV1 = exports.OrganizationsMockClientV1 = exports.OrganizationsNullClientV1 = exports.OrganizationV1 = exports.IndustryV1 = exports.SystemPurposeV1 = void 0;
 var SystemPurposeV1_1 = require("./SystemPurposeV1");
 Object.defineProperty(exports, "SystemPurposeV1", { enumerable: true, get: function () { return SystemPurposeV1_1.SystemPurposeV1; } });
 var IndustryV1_1 = require("./IndustryV1");
@@ -10,7 +10,7 @@ Object.defineProperty(exports, "OrganizationV1", { enumerable: true, get: functi
 var OrganizationsNullClientV1_1 = require("./OrganizationsNullClientV1");
 Object.defineProperty(exports, "OrganizationsNullClientV1", { enumerable: true, get: function () { return OrganizationsNullClientV1_1.OrganizationsNullClientV1; } });
 var OrganizationsMockClientV1_1 = require("./OrganizationsMockClientV1");
-Object.defineProperty(exports, "OrganizationsMemoryClientV1", { enumerable: true, get: function () { return OrganizationsMockClientV1_1.OrganizationsMockClientV1; } });
+Object.defineProperty(exports, "OrganizationsMockClientV1", { enumerable: true, get: function () { return OrganizationsMockClientV1_1.OrganizationsMockClientV1; } });
 var OrganizationsDirectClientV1_1 = require("./OrganizationsDirectClientV1");
 Object.defineProperty(exports, "OrganizationsDirectClientV1", { enumerable: true, get: function () { return OrganizationsDirectClientV1_1.OrganizationsDirectClientV1; } });
 var OrganizationsCommandableHttpClientV1_1 = require("./OrganizationsCommandableHttpClientV1");
